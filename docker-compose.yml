@@ -1,0 +1,10 @@
+services:
+  task-processor:
+    build: .
+    container_name: task-processor
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
